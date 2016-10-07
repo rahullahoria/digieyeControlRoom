@@ -42,6 +42,13 @@
 
             })
 
+            .when('/search', {
+                controller: 'SearchController',
+                templateUrl: 'search/search.view.html',
+                controllerAs: 'vm'
+
+            })
+
             .when('/home/:mobile', {
                 controller: 'HomeController',
                 templateUrl: 'home/home.view.html',

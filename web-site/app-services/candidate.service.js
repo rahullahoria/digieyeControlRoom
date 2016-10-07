@@ -53,6 +53,15 @@
                 .then(handleSuccess, handleError('Error getting all users'));
         }
 
+        function SearchWorker(user) {
+
+            console.log(user);
+            var root = {};
+            root['root'] = user;
+            return $http
+                .get('http://blueteam.in/api/search/search', root)
+                .then(handleSuccess, handleError('Error in search'));
+        }
         function GetById(id) {
             return $http.get('/api/users/' + id).then(handleSuccess, handleError('Error getting user by id'));
         }
