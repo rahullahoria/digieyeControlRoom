@@ -34,7 +34,12 @@
 
         }
 
-       
+       function loadUser(){
+            vm.inUser = UserService.GetInUser();
+            console.log("in user",vm.inUser);
+
+
+        }
         vm.logout = function(){
             vm.inUser = null;
             $location.path('#/login');

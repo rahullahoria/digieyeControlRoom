@@ -190,7 +190,7 @@
                         <div class="col-lg-6">
                                 <fieldset>
                                     <div class="form-group" ng-class="{ 'has-error': form.id_number.$dirty && form.id_number.$error.required }">
-                                        <input class="form-control" placeholder="Id Number / Mobile Number" type="text" name="id_number" id="id_number" ng-model="vm..id_number" required >
+                                        <input class="form-control" placeholder="Id Number / Mobile Number" type="text" name="id_number" id="id_number" ng-model="vm.id_number" required >
                                         <span ng-show="form.id_number.$dirty && form.id_number.$error.required" class="help-block">Id Number / Mobile Number is required</span>
                                     </div>
 
@@ -198,8 +198,7 @@
 
                         </div>
                         <div class="col-lg-6">
-                            <select name="id_name" id="id_name" data-ng-change="vm.search()" >
-                                <option value="0" selected>Select Id Type</option>
+                            Select Id Type <select name="id_name" id="id_name" ng-model="vm.id_name" ng-change="vm.search()" >
                                 <option value="mobile" >Mobile Number</option>
                                 <option value="pv" >Police Verification</option>
                                 <option value="ac" >Adhar Card</option>
