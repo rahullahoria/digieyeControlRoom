@@ -207,22 +207,22 @@
                                 </select>
                             </div>
                         </fieldset>
-                        </form>
+                        </form>{{ vm.searchworker.name }} 
                         <div class="search_result">
-                            <div ng-repeat="searchworker in vm.searchworker" ng-show="searchworker.id" >
+                            <div  ng-show="vm.searchworker.id" >
                                 <div class="thumbnail">
                                     <div class="image">
-                                        <img src="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.photo }}" style="max-height: 100%" alt="No Image"/>
+                                        <img src="http://api.file-dog.shatkonlabs.com/files/rahul/{{ vm.searchworker.photo }}" style="max-height: 100%" alt="No Image"/>
                                     </div>
                                 </div>
-                                <span>{{ searchworker.name }} 
-                                <br/> {{ searchworker.mobile }}
-                                <br/> {{ searchworker.emergency_no }}
-                                <br/>{{ searchworker.status }}
-                                <br/>(DE-{{ searchworker.id }})
+                                <span>{{ vm.searchworker.name }} 
+                                <br/> {{ vm.searchworker.mobile }}
+                                <br/> {{ vm.searchworker.emergency_no }}
+                                <br/>{{ vm.searchworker.status }}
+                                <br/>(DE-{{ vm.searchworker.id }})
                                 </span>
                                 <span>
-                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.pv }}" ng-show="searchworker.pv">PV</a>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ vm.searchworker.pv }}" ng-show="searchworker.pv">PV</a>
                                 <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.adhar_card }}" ng-show="searchworker.adhar_card">AC</a>
                                 <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.voter_id }}" ng-show="searchworker.voter_id">VC</a>
                                 <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.driving_license }}" ng-show="searchworker.driving_license">DL</a>
