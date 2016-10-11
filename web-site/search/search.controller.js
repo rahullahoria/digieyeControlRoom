@@ -128,12 +128,12 @@
             console.log("search function");
             CandidateService.SearchWorker(vm.worker)
                 .then(function (response) {
-                    //console.log("safa",response);
+                    console.log("safa",response);
                     if (response.root.worker) {
                         vm.searchworker = {};
                         vm.dataLoading = false;
                         vm.searchworker = response.root.worker;
-                        console.log(vm.searchworker.id);
+                        console.log(vm.searchworker);
                         //loadToCallCandidates();
                         //$location.path('/login');
                     } else {

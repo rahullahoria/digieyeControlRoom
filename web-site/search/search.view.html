@@ -207,30 +207,40 @@
                                 </select>
                             </div>
                         </fieldset>
-                        </form>{{ vm.searchworker.name }} 
-                        <div class="search_result">
-                            <div  ng-show="vm.searchworker.id" >
-                                <div class="thumbnail">
-                                    <div class="image">
-                                        <img src="http://api.file-dog.shatkonlabs.com/files/rahul/{{ vm.searchworker.photo }}" style="max-height: 100%" alt="No Image"/>
-                                    </div>
+                        </form>
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <div class="col-lg-6">
+                              <div  ng-show="vm.searchworker.id" >
+                                <div class="thumbnail-big">
+                                  <div class="image-big">
+                                    <img src="http://api.file-dog.shatkonlabs.com/files/rahul/{{ vm.searchworker.photo }}" style="height: 100%" alt="No Image"/>
+                                  </div>
                                 </div>
-                                <span>{{ vm.searchworker.name }} 
-                                <br/> {{ vm.searchworker.mobile }}
-                                <br/> {{ vm.searchworker.emergency_no }}
-                                <br/>{{ vm.searchworker.status }}
-                                <br/>(DE-{{ vm.searchworker.id }})
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <span> Name : {{ vm.searchworker.name }} 
+                                <br/> Mobile : {{ vm.searchworker.mobile }}
+                                <br/> Emergency No : {{ vm.searchworker.emergency_no }}
+                                
+                                <br/>Local Id No : (DE-{{ vm.searchworker.id }})
                                 </span>
                                 <span>
                                 <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ vm.searchworker.pv }}" ng-show="searchworker.pv">PV</a>
-                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.adhar_card }}" ng-show="searchworker.adhar_card">AC</a>
-                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.voter_id }}" ng-show="searchworker.voter_id">VC</a>
-                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.driving_license }}" ng-show="searchworker.driving_license">DL</a>
-                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.pan_card }}" ng-show="searchworker.pan_card">PC</a>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ vm.searchworker.adhar_card }}" ng-show="searchworker.adhar_card">AC</a>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ vm.searchworker.voter_id }}" ng-show="searchworker.voter_id">VC</a>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ vm.searchworker.driving_license }}" ng-show="searchworker.driving_license">DL</a>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ vm.searchworker.pan_card }}" ng-show="searchworker.pan_card">PC</a>
                                 </span>
-                                <div>{{ searchworker.lord_name }} ({{ searchworker.lord_mobile }})
-                                <br/>{{ searchworker.lord_address }}</div>    
-                            </div>        
+                            </div>
+                            </div>
+                            <div class="panel-footer">
+                            <div>Landlord Name : {{ vm.searchworker.lord_name }} ({{ vm.searchworker.lord_mobile }})
+                                <br/>Landlord Address : {{ vm.searchworker.lord_address }}
+                            </div>    
+                          </div>        
+                        </div>
                         </div>
                     </div>
 
