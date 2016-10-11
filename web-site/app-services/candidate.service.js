@@ -20,6 +20,7 @@
         service.Update = Update;
         service.Delete = Delete;
         service.Search = Search;
+        service.SearchWorker = SearchWorker;
         service.GetAllProfession = GetAllProfession;
 
         return service;
@@ -59,7 +60,7 @@
             var root = {};
             root['root'] = user;
             return $http
-                .get('http://blueteam.in/api/search/search', root)
+                .get('http://blueteam.in/api/search?id_number='+user.id_number+'&id_type='+user.id_name, root)
                 .then(handleSuccess, handleError('Error in search'));
         }
         function GetById(id) {

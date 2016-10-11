@@ -187,30 +187,55 @@
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <form role="form" name="search" ng-submit="vm.search()" role="form">
-                        <div class="col-lg-6">
-                                <fieldset>
-                                    <div class="form-group" ng-class="{ 'has-error': form.id_number.$dirty && form.id_number.$error.required }">
-                                        <input class="form-control" placeholder="Id Number / Mobile Number" type="text" name="id_number" id="id_number" ng-model="vm.id_number" required >
-                                        <span ng-show="form.id_number.$dirty && form.id_number.$error.required" class="help-block">Id Number / Mobile Number is required</span>
-                                    </div>
-
-                                </fieldset>
-
-                        </div>
-                        <div class="col-lg-6">
-                            Select Id Type <select name="id_name" id="id_name" ng-model="vm.id_name" ng-change="vm.search()" >
-                                <option value="mobile" >Mobile Number</option>
-                                <option value="pv" >Police Verification</option>
-                                <option value="ac" >Adhar Card</option>
-                                <option value="vc" >Voter Card</option>
-                                <option value="dl" >Driving License</option>
-                                <option value="pc" >Pan Card</option>
-                            </select>
-                        </div>
+                        <fieldset>
+                            <div class="col-lg-6">
+                                
+                                <div class="form-group" ng-class="{ 'has-error': form.id_number.$dirty && form.id_number.$error.required }">
+                                    <input class="form-control" placeholder="Id Number / Mobile Number" type="text" name="id_number" id="id_number" ng-model="vm.worker.id_number" required >
+                                    <span ng-show="form.id_number.$dirty && form.id_number.$error.required" class="help-block">Id Number / Mobile Number is required</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                Select Id Type <select name="id_name" id="id_name" ng-model="vm.worker.id_name" ng-change="vm.search()" >
+                                    <option value="mobile" >Mobile Number</option>
+                                    <option value="pv" >Police Verification</option>
+                                    <option value="ac" >Adhar Card</option>
+                                    <option value="vc" >Voter Card</option>
+                                    <option value="dl" >Driving License</option>
+                                    <option value="pc" >Pan Card</option>
+                                    <option value="user_id" >user_id Card</option>
+                                </select>
+                            </div>
+                        </fieldset>
                         </form>
+                        <div class="search_result">
+                            <div ng-repeat="searchworker in vm.searchworker" ng-show="searchworker.id" >
+                                <div class="thumbnail">
+                                    <div class="image">
+                                        <img src="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.photo }}" style="max-height: 100%" alt="No Image"/>
+                                    </div>
+                                </div>
+                                <span>{{ searchworker.name }} 
+                                <br/> {{ searchworker.mobile }}
+                                <br/> {{ searchworker.emergency_no }}
+                                <br/>{{ searchworker.status }}
+                                <br/>(DE-{{ searchworker.id }})
+                                </span>
+                                <span>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.pv }}" ng-show="searchworker.pv">PV</a>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.adhar_card }}" ng-show="searchworker.adhar_card">AC</a>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.voter_id }}" ng-show="searchworker.voter_id">VC</a>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.driving_license }}" ng-show="searchworker.driving_license">DL</a>
+                                <a href="http://api.file-dog.shatkonlabs.com/files/rahul/{{ searchworker.pan_card }}" ng-show="searchworker.pan_card">PC</a>
+                                </span>
+                                <div>{{ searchworker.lord_name }} ({{ searchworker.lord_mobile }})
+                                <br/>{{ searchworker.lord_address }}</div>    
+                            </div>        
+                        </div>
                     </div>
 
                     <!-- /.panel-body -->
+
                 </div>
                 <!-- /.panel -->
 

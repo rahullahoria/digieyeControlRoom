@@ -15,7 +15,7 @@
         vm.allUsers = [];
         vm.deleteUser = deleteUser;
         vm.loadUser = loadUser;
-
+        vm.search = search;
         vm.recruited = 0;
         vm.in_queue = 0;
         vm.new = 0;
@@ -121,21 +121,19 @@
             vm.user = vm.toCallCandidates[index];
 
         }
-        
-        vm.search = function search() {
+
+        function search() {
 
             vm.dataLoading = true;
-
             console.log("search function");
-
-
-            CandidateService.SearchWorker(vm.search)
+            CandidateService.SearchWorker(vm.worker)
                 .then(function (response) {
-                    console.log("safa",response);
-                    if (response.root.worker_id) {
-                        vm.worker = {};
+                    //console.log("safa",response);
+                    if (response.root.worker) {
+                        vm.searchworker = {};
                         vm.dataLoading = false;
-
+                        vm.searchworker = response.root.worker;
+                        console.log(vm.searchworker.id);
                         //loadToCallCandidates();
                         //$location.path('/login');
                     } else {
