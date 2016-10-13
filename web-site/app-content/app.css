@@ -26,11 +26,11 @@
 }
 
 .image-big:hover img {
-    -webkit-transform:scale(5); /* Safari and Chrome */
-    -moz-transform:scale(5); /* Firefox */
-    -ms-transform:scale(5); /* IE 9 */
-    -o-transform:scale(5); /* Opera */
-    transform:scale(5);
+    -webkit-transform:scale(3); /* Safari and Chrome */
+    -moz-transform:scale(3); /* Firefox */
+    -ms-transform:scale(3); /* IE 9 */
+    -o-transform:scale(3); /* Opera */
+    transform:scale(3);
 }
 .image img {
     -webkit-transition: all 1s ease; /* Safari and Chrome */

@@ -242,19 +242,19 @@
                                         <span ng-show="form.worker_native_add.$dirty && form.worker_native_add.$error.required" class="help-block">Worker native address is required</span>
                                     </div>
                                     <div class="form-group" ng-class="{ 'has-error': form.pv_uid.$dirty && form.pv_uid.$error.required }">
-                                        <input class="form-control" placeholder="Police Verification Number" type="text" name="pv_uid" id="pv_uid" ng-model="vm.pv_uid" >
+                                        <input class="form-control" placeholder="Police Verification Number" type="text" name="pv_uid" id="pv_uid" ng-model="vm.worker.pv_uid" >
                                     </div>
                                     <div class="form-group" ng-class="{ 'has-error': form.adhar_card_uid.$dirty && form.adhar_card_uid.$error.required }">
-                                        <input class="form-control" placeholder="Adhar Card Number" type="text" name="adhar_card_uid" id="adhar_card_uid" ng-model="vm.adhar_card_uid" >
+                                        <input class="form-control" placeholder="Adhar Card Number" type="text" name="adhar_card_uid" id="adhar_card_uid" ng-model="vm.worker.adhar_card_uid" >
                                     </div>
                                     <div class="form-group" ng-class="{ 'has-error': form.voter_id_uid.$dirty && form.voter_id_uid.$error.required }">
-                                        <input class="form-control" placeholder="Voter I-card Number" type="text" name="voter_id_uid" id="voter_id_uid" ng-model="vm.voter_id_uid" >
+                                        <input class="form-control" placeholder="Voter I-card Number" type="text" name="voter_id_uid" id="voter_id_uid" ng-model="vm.worker.voter_id_uid" >
                                     </div>
                                     <div class="form-group" ng-class="{ 'has-error': form.driving_license_uid.$dirty && form.driving_license_uid.$error.required }">
-                                        <input class="form-control" placeholder="Driving License Number" type="text" name="driving_license_uid" id="driving_license_uid" ng-model="vm.driving_license_uid" >
+                                        <input class="form-control" placeholder="Driving License Number" type="text" name="driving_license_uid" id="driving_license_uid" ng-model="vm.worker.driving_license_uid" >
                                     </div>
                                     <div class="form-group" ng-class="{ 'has-error': form.pan_card_uid.$dirty && form.pan_card_uid.$error.required }">
-                                        <input class="form-control" placeholder="Pan Card Number" type="text" name="pan_card_uid" id="pan_card_uid" ng-model="vm.pan_card_uid" >
+                                        <input class="form-control" placeholder="Pan Card Number" type="text" name="pan_card_uid" id="pan_card_uid" ng-model="vm.worker.pan_card_uid" >
                                     </div>
                                         <!-- <div class="form-group" ng-class="{ 'has-error': form.worker_photo.$dirty && form.worker_photo.$error.required }">
                                         <input class="form-control" placeholder="Worker Photo" type="file" name="worker_photo" id="worker_photo" ng-model="vm.worker.worker_photo" required >
